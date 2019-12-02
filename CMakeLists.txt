@@ -1,4 +1,4 @@
-cmcmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 2.8)
 
 project(CH CXX)
 
@@ -9,7 +9,7 @@ else()
     add_definitions(-std=c++17)
 endif()
 
-
+include_directories(include)
 
 enable_testing()
 
