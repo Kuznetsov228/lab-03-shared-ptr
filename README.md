@@ -31,4 +31,6 @@ public:
     // возвращает количество объектов SharedPtr, которые ссылаются на тот же управляемый объект
     auto use_count() const -> size_t;
 };
+[![Build Status](https://travis-ci.org/Kuznetsov228/lab-03-shared-ptr.svg?branch=master)](https://travis-ci.org/Kuznetsov228/lab-03-shared-ptr)
+
 ```
