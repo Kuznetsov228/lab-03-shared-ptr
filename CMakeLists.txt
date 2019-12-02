@@ -9,7 +9,7 @@ else()
     add_definitions(-std=c++17)
 endif()
 
-include_directories(include)
+
 
 enable_testing()
 
