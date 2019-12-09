@@ -86,8 +86,8 @@ public:
 
     }
     void swap(SharedPtr& r){
-        std:: swap(ptr, r.ptr);
-        std:: swap(counter, r.counter);
+        std::swap(ptr, r.ptr);
+        std::swap(counter, r.counter);
 
     }
     // РІРѕР·РІСЂР°С‰Р°РµС‚ РєРѕР»РёС‡РµСЃС‚РІРѕ РѕР±СЉРµРєС‚РѕРІ SharedPtr, РєРѕС‚РѕСЂС‹Рµ СЃСЃС‹Р»Р°СЋС‚СЃСЏ РЅР° С‚РѕС‚ Р¶Рµ СѓРїСЂР°РІР»СЏРµРјС‹Р№ РѕР±СЉРµРєС‚
