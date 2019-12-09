@@ -37,27 +37,20 @@ public:
 
     }
     SharedPtr(SharedPtr&& r){
-        ptr = r.ptr;
-        counter = r.counter;
-        delete r.ptr;
-        delete r.counter;
+        this->swap(r);
 
     }
     ~SharedPtr()
     {
-        if (ptr != nullptr)
-            delete[]ptr;
+        this->reset();
     }
     auto operator=(const SharedPtr& r)->SharedPtr&{
-        ptr=r.ptr;
-        counter=r.counter;
-        ++*counter;
+        r.swap(*this);
+        return *this;
     }
     auto operator=(SharedPtr&& r)->SharedPtr&{
-        ptr = r.ptr;
-        counter = r.counter;
-        r.ptr = nullptr;
-        r.counter = nullptr;
+        std::move(r).swap(*this);
+        return *this;
     }
 
     // РїСЂРѕРІРµСЂСЏРµС‚, СѓРєР°Р·С‹РІР°РµС‚ Р»Рё СѓРєР°Р·Р°С‚РµР»СЊ РЅР° РѕР±СЉРµРєС‚
