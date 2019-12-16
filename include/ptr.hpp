@@ -53,7 +53,7 @@ public:
         return *this;
     }
 
-    // РїСЂРѕРІРµСЂСЏРµС‚, СѓРєР°Р·С‹РІР°РµС‚ Р»Рё СѓРєР°Р·Р°С‚РµР»СЊ РЅР° РѕР±СЉРµРєС‚
+    
     operator bool() const{
         return ptr!= nullptr;
     }
@@ -69,8 +69,8 @@ public:
 
 
     auto get()->T*{
-        if (ptr == nullptr ) return 0;
-        else cout<<*ptr<<endl;
+        return this->ptr;
+    
     }
     void reset(){
         ptr= nullptr;
@@ -90,14 +90,13 @@ public:
         std::swap(counter, r.counter);
 
     }
-    // РІРѕР·РІСЂР°С‰Р°РµС‚ РєРѕР»РёС‡РµСЃС‚РІРѕ РѕР±СЉРµРєС‚РѕРІ SharedPtr, РєРѕС‚РѕСЂС‹Рµ СЃСЃС‹Р»Р°СЋС‚СЃСЏ РЅР° С‚РѕС‚ Р¶Рµ СѓРїСЂР°РІР»СЏРµРјС‹Р№ РѕР±СЉРµРєС‚
+    
     atomic_uint* use_count()  {
-        if(ptr!= nullptr)   cout<<*counter<<endl;
-        else {
-            return 0;
-        }
+        return this->counter;
+        
+            
+        
     }
 };
-
 
 
